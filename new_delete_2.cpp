@@ -44,7 +44,7 @@ void show_stat(Animal *animal)
 
 int main()
 {
-    Animal *list[10];
+    Animal *list[10]; // list[10]은 메모리영역에 할당되어 있음 list[11]생성되게되면 오류 발생
     int animal_num = 0;
 
     for (;;)
@@ -60,7 +60,7 @@ int main()
         {
             int play_with;
         case 1:
-            list[animal_num] = new Animal;
+            list[animal_num] = new Animal; // heap영역에 메모리 동적할당
             create_animal(list[animal_num]);
 
             animal_num++;
